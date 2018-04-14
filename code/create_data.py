@@ -12,13 +12,13 @@ def create_data_dump():
 		hindi_text = f.read()
 		hindi_text = hindi_text.decode("utf-8")
 
-	hindi_sentences = hindi_text.split("\n")[:1000]#nltk.tokenize.sent_tokenize(text)
+	hindi_sentences = hindi_text.split("\n")#nltk.tokenize.sent_tokenize(text)
 
 	with open(bengali_data_file_name, 'rb') as f:
 		bengali_text = f.read()
 		bengali_text = bengali_text.decode("utf-8")
 
-	bengali_sentences = bengali_text.split("\n")[:1000]#nltk.tokenize.sent_tokenize(text)
+	bengali_sentences = bengali_text.split("\n")#nltk.tokenize.sent_tokenize(text)
 	print "Hindi sentences : ", str(len(hindi_sentences)), ", Bengali sentences ", str(len(bengali_sentences))
 
 	with open('../data/hindi_dump.p', 'wb') as f:
